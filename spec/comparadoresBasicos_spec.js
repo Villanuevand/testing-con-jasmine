@@ -30,4 +30,33 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 		});
 	});
 
+	describe('Comparador "toBe()"', function() {
+		var objetoTest = {a: 50, b: 60};
+		var arregloTest = [2,4,8];
+		it('Si el objeto es él mismo', function() {
+			expect(Comparadores.unObjeto).toBe(Comparadores.unObjeto);
+		});
+		it('Si el objeto no es él mismo', function() {
+			expect(Comparadores.unObjeto).not.toBe(objetoTest);
+		});
+		it('Deberian ser iguales', function() {
+			expect(Comparadores.unObjeto).toEqual(objetoTest);
+		});
+		it('Deberian se igual en valor', function() {
+			expect(Comparadores.jasmine).toBe("Jasmine Cookbook");
+		});
+		it('Son iguales en valor', function() {
+			expect(Comparadores.unArray).toEqual([2, 4, 8]);
+		});
+		it('No  deberian ser iguales en tipo', function() {
+			expect(Comparadores.unArray).not.toBe([8, 9, 10]);
+		});
+				
+	});
+	/*
+	The toEqual() matcher checks equivalence.
+	On the other hand, the toBe() matcher ensures
+	that they are the exact same objects.
+	*/
+
 });
