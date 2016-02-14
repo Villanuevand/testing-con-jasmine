@@ -53,10 +53,23 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 		});
 				
 	});
-	/*
-	The toEqual() matcher checks equivalence.
-	On the other hand, the toBe() matcher ensures
-	that they are the exact same objects.
-	*/
+	describe('Comparador "toBeDefined"()', function() {
+		var fakeVar;
+		it('Si "Jasmine Cookbook" está definido', function() {
+			expect('Jasmine Cookbook').toBeDefined();
+		});
+		it('Si el objeto "Comparadores" esá definido', function() {
+			expect(Comparadores).toBeDefined();
+		});
+		it('Si Comparadores.unNumero está definido', function() {
+			expect(Comparadores.unNumero).toBeDefined();
+		});
+		it('Si Comparadores.unFuncion NO está definido (undefined)', function() {
+			expect(Comparadores.unaFuncion).not.toBeDefined();
+		});
+		it('Si la variable "fakeVariable no está definida"', function() {
+			expect(fakeVar).not.toBeDefined();
+		});
+	});
 
 });
