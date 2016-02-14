@@ -85,7 +85,15 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 		it('Si la variable "fakeVariable es indefinida"', function() {
 			expect(fakeVar).toBeUndefined();
 		});
-		
+	});
+	describe('Comparador "toBeNull()', function() {
+		it('Deberia ser aplicado para comprar contra "null"', function() {
+			var valueUndefined;
+			expect(null).toBeNull();
+			expect(Comparadores.nulleable).toBeNull();
+			expect(valueUndefined).not.toBeNull();
+			expect(Comparadores.lorem).not.toBeNull();
+		});
 	});
 
 });

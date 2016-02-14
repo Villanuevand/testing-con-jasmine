@@ -4,5 +4,6 @@ var Comparadores = {
 	unNumero : 16,
 	lorem : 'Lorem ipsum dolor',
 	unObjeto : {a : 50, b: 60},
-	unArray : [2,4,8]
+	unArray : [2,4,8],
+	nulleable : null
 };
