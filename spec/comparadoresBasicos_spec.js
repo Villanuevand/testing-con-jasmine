@@ -71,5 +71,21 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 			expect(fakeVar).not.toBeDefined();
 		});
 	});
+	describe('Comparador "toBeUndefined()"', function() {
+		var fakeVar;
+		it('Si el objeto "Comparadores" no es indefinido', function() {
+			expect(Comparadores).not.toBeUndefined();
+		});
+		it('Si Comparadores.unNumero no es indefinido', function() {
+			expect(Comparadores.unNumero).not.toBeUndefined();
+		});
+		it('Si Comparadores.unFuncion es indefinido', function() {
+			expect(Comparadores.unaFuncion).toBeUndefined();
+		});
+		it('Si la variable "fakeVariable es indefinida"', function() {
+			expect(fakeVar).toBeUndefined();
+		});
+		
+	});
 
 });
