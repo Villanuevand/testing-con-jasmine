@@ -86,8 +86,13 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 		});
 	});
 	describe('Comparador "toContain()', function() {
-		it('"toBe" deberia ser aplicado para comparar', function() {
-			
+		it('"toContain" deberia ser aplicado para encontrar un item en un array', function() {
+			var miArray = ['Jasmine','Cookbook', 'Javascript'];
+			expect([1,2,3]).toContain(2);
+			expect([1,2,3]).toContain(2,3);
+			expect(miArray).toContain('Javascript');
+			expect([1,3,4]).not.toContain(2);
+			expect(miArray).not.toContain('C#');
 		});
 	});
 	describe('Comparador "toBeLessthan()"', function() {
