@@ -65,5 +65,14 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 			expect(Comparadores.lorem).not.toBeNull();
 		});
 	});
+	describe('Comparador "toBeTruthy()"', function() {
+		it('"toBeTruthy" debería ser aplicado para comparar contra el valor boleano de una variable', function() {
+			// a = undefined ; foo = "foo"
+			var a, foo = "foo";
+			expect(true).toBeTruthy();
+    		expect(foo).toBeTruthy();
+    		expect(a).not.toBeTruthy();
+		});
+	});
 
 });
