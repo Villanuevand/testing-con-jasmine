@@ -75,8 +75,14 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 		});
 	});
 	describe('Comparador "toBeFalsy()"', function() {
-		it('"toBe" deberia ser aplicado para comparar', function() {
-			
+		it('"toBeFalsy" debería ser aplicado para comparar contra el valor boleano de una variable, undefined o not defined', function() {
+			var a = 12, b = "True para strings no vacios";
+			expect(false).toBeFalsy();
+			expect(null).toBeFalsy();
+			expect(true).not.toBeFalsy();
+			expect("Jasmine Cookbook").not.toBeFalsy();
+			expect(a).not.toBeFalsy();
+			expect(b).not.toBeFalsy();
 		});
 	});
 	describe('Comparador "toContain()', function() {
