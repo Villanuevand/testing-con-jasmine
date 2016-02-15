@@ -126,5 +126,17 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 			expect(4.223).not.toBeCloseTo(4.22,4);
 		});
 	});
+	describe('Comparador "toThrow"()', function() {
+		it('"toThrow" se utiliza para conocer si una funcion arroja una excepción.', function() {
+			var foo = function () {
+				return 1 + 2;
+			};
+			var bar = function () {
+				return a + 2;
+			};
+			expect(foo).not.toThrow();
+			expect(bar).toThrow();
+		});
+	});
 
 });
