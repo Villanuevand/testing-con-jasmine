@@ -70,8 +70,33 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 			// a = undefined ; foo = "foo"
 			var a, foo = "foo";
 			expect(true).toBeTruthy();
-    		expect(foo).toBeTruthy();
-    		expect(a).not.toBeTruthy();
+    			expect(foo).toBeTruthy();
+    			expect(a).not.toBeTruthy();
+		});
+	});
+	describe('Comparador "toBeFalsy()"', function() {
+		it('"toBe" deberia ser aplicado para comparar', function() {
+			
+		});
+	});
+	describe('Comparador "toContain()', function() {
+		it('"toBe" deberia ser aplicado para comparar', function() {
+			
+		});
+	});
+	describe('Comparador "toBeLessthan()"', function() {
+		it('"toBe" deberia ser aplicado para comparar', function() {
+			
+		});
+	});
+	describe('Comparador "toBeGreaterThan()"', function() {
+		it('"toBe" deberia ser aplicado para comparar', function() {
+			
+		});
+	});
+	describe('Comparador "toBeCloseTo()"', function() {
+		it('"toBe" deberia ser aplicado para comparar', function() {
+			
 		});
 	});
 
