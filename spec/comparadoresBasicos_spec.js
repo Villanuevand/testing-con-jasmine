@@ -96,8 +96,12 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 		});
 	});
 	describe('Comparador "toBeLessthan()"', function() {
-		it('"toBe" deberia ser aplicado para comparar', function() {
-			
+		it('"toBeLessThan" deberia ser aplicado para comparaciones matemáticas', function() {
+			var PI = Math.PI, g = 9.71, num1 = 5, num2 = 9;
+			expect(PI).toBeLessThan(g);
+			expect(num1).toBeLessThan(num2);
+			expect(g).not.toBeLessThan(PI);
+			expect(num2).not.toBeLessThan(num1);
 		});
 	});
 	describe('Comparador "toBeGreaterThan()"', function() {
