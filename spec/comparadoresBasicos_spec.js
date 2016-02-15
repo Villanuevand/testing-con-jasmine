@@ -138,5 +138,17 @@ describe('Jasmine Matchers (Comparadores) Básicos', function() {
 			expect(bar).toThrow();
 		});
 	});
+	describe('Comparador "toThrowError()"', function() {
+		it('"toThrowError" se utiliza para conocer si una excepción puntual es arrojada.', function() {
+			var foo = function () {
+				throw new TypeError('foo bar baz');
+			};
+
+			expect(foo).toThrowError('foo bar baz');
+			expect(foo).toThrowError(/bar/);
+			expect(foo).toThrowError(TypeError);
+			expect(foo).toThrowError(TypeError,'foo bar baz');
+		});
+	});
 
 });
